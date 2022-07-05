@@ -8,13 +8,18 @@
 
 		<title>The A Finder</title>
 
+		<!-- external Fonts link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"> 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<header>             
-			<ul>
+		<header>
+			<h2 class="menuLogo">The A Finder</h2>             
+			<ul class="menu">
 				<li><a href="">Find a Clinic</a></li>
 				<li><a href="">Find Funding</a></li>
 				<li><a href="">Privacy Protection</a></li>
@@ -23,15 +28,20 @@
 				<li><a href="">Find Support</a></li>
 				<li><a href="">Donate</a></li>
 			</ul>
+			<div class="sandwichContainer" onclick="sandwichMenu(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
 		</header>
 		<section class="hero">
-			<h1>Abortions are Health Care</h1>
-			<h3>People should have access to abortions no matter the circumstance.</h3>
-			<p>With the recent SCOTUS decision to overturn Roe v Wade, some states have banned or restricted access to abortions. Here are some tips on finding the closest clinic location, requesting funding, protecting your privacy online, accessing at-home abortion pills and information, finding mental health and legal support, as well as a list of some orgaizations to donate to.</p>
+			<h1>Abortion is Health Care</h1>
+			<h3>"Like all medical matters, decisions regarding abortion should be made by patients in consultation with their healthcare providers, and without undue interference by outside parties. Those obtaining abortion should be entitled to privacy, dignity, respect and support."</h3>
+			<p>With the recent SCOTUS decision to overturn Roe v Wade, some states have banned or restricted access to abortions. We strongly believe that everyone should have safe and unrestricted access to abortion care. Here are some tips on finding the closest clinic locations, requesting funding, protecting your privacy online, accessing at-home abortion pills and information, finding mental health and legal support, as well as a list of some orgaizations to donate to.</p>
 			<button class="btn">Find a Clinic</button>
 		</section>
 		<section class= "threeColumn">
-			<section>
+			<section class="column">
 				<img src="" alt="">
 				<h2>Find a Clinic</h2>
 				<p></p>
@@ -42,9 +52,9 @@
 					<li><a href="https://www.plannedparenthood.org/health-center">Planned Parenthood</a></li>
 				</ul>
 			</section>
-			<section>
+			<section class="column">
 				<img src="" alt="">
-				<h2>Find Funding for Your Abortion</h2>
+				<h2>Find Funding</h2>
 				<p></p>
 				<ul>
 					<li><a href="https://abortionfunds.org/need-abortion/">Abortion Funds</a></li>
@@ -52,7 +62,7 @@
 					<li><a href="https://brigidalliance.org/">The Brigid Alliance</a></li>
 				</ul>
 			</section>
-			<section>
+			<section class="column">
 				<img src="" alt="">
 				<h2>Legal Resources</h2>
 				<p></p>
@@ -99,30 +109,32 @@
 				</ul>
 			</section>
 		</section>
-		<section>
-			<h3>Please consider donating to these organizations:</h3>
-			<ul>
-				<li><a href="https://abortionfunds.org/">Abortion Funds</a></li>
-				<li><a href="https://donations4abortion.com/">Donations4Abortion</a></li>
-				<li><a href="https://brigidalliance.org/">The Brigid Alliance</a></li>
-				<li><a href="https://www.plannedparenthood.org/">Planned Parenthood</a></li>
-				<li><a href="https://www.prochoiceamerica.org/fight-back-for-our-freedom/">NARAL</a></li>
-				<li><a href="https://abortioncarenetwork.org/">Abortion Care Network</a></li>
-				<li><a href="https://reproductiverights.org/">Center for Reproductive Rights</a></li>
-			</ul>
-		</section>
-		<section>
-			<h3>Get Involved</h3>
-			<p>Volunteer with an already-established network or abortion fund -do not act alone or encourage abortion-seekers to visit you from our of state via social media.</p>
-			<ul>
-				<li><a href="https://postroehandbook.com/cheat-sheet-for-protecting-access/">Handbook for a Post-Roe America</a></li>
-				<li><a href="https://map.wewontgoback.com/">We Won't Go Back</a></li>
-				<li><a href="https://map.womensmarch.com/">Women's March</a></li>
-				<li><a href="https://www.weareplannedparenthood.org/aR-2oEJliUmK7sUQiEtrFQ2">Planned Parenthood</a></li>
-				<li><a href="https://www.aclu.org/news/reproductive-freedom/six-ways-join-fight-for-abortion-rights-roe-v-wade">American Civil Liberties Union (ACLU)</a></li>
-				<li><a href="https://www.law.nyu.edu/centers/race-inequality-law/protest-tips">Protest Tips</a></li>
-				<li><a href="https://elie-ziehl.medium.com/a-protesters-guide-to-basic-first-aid-3c6b390e1773">Protester's Guide to First Aid</a></li>
-			</ul>
+		<section class="donateInvolve">
+			<section>
+				<h3>Please consider donating to these organizations:</h3>
+				<ul>
+					<li><a href="https://abortionfunds.org/">Abortion Funds</a></li>
+					<li><a href="https://donations4abortion.com/">Donations4Abortion</a></li>
+					<li><a href="https://brigidalliance.org/">The Brigid Alliance</a></li>
+					<li><a href="https://www.plannedparenthood.org/">Planned Parenthood</a></li>
+					<li><a href="https://www.prochoiceamerica.org/fight-back-for-our-freedom/">NARAL</a></li>
+					<li><a href="https://abortioncarenetwork.org/">Abortion Care Network</a></li>
+					<li><a href="https://reproductiverights.org/">Center for Reproductive Rights</a></li>
+				</ul>
+			</section>
+			<section>
+				<h3>Get Involved</h3>
+				<p>Volunteer with an already-established network or abortion fund -do not act alone or encourage abortion-seekers to visit you from our of state via social media.</p>
+				<ul>
+					<li><a href="https://postroehandbook.com/cheat-sheet-for-protecting-access/">Handbook for a Post-Roe America</a></li>
+					<li><a href="https://map.wewontgoback.com/">We Won't Go Back</a></li>
+					<li><a href="https://map.womensmarch.com/">Women's March</a></li>
+					<li><a href="https://www.weareplannedparenthood.org/aR-2oEJliUmK7sUQiEtrFQ2">Planned Parenthood</a></li>
+					<li><a href="https://www.aclu.org/news/reproductive-freedom/six-ways-join-fight-for-abortion-rights-roe-v-wade">American Civil Liberties Union (ACLU)</a></li>
+					<li><a href="https://www.law.nyu.edu/centers/race-inequality-law/protest-tips">Protest Tips</a></li>
+					<li><a href="https://elie-ziehl.medium.com/a-protesters-guide-to-basic-first-aid-3c6b390e1773">Protester's Guide to First Aid</a></li>
+				</ul>
+			</section>
 		</section>
 		<footer>
 			<span>The A Finder © 2022</span>
