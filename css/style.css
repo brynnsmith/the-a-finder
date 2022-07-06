@@ -24,6 +24,27 @@
 body {
      font-family: 'Inter', sans-serif;
      background-color: #f9f9f9;
+     font-size: 10px;
+     color: #333333;
+}
+h1 {
+     font-size: 2.6rem;
+}
+h2, h3 {
+     font-size: 1.5rem;
+}
+ul {
+     margin-top: -8px;
+}
+li {
+     font-size: 1.2rem;
+     line-height: 1.4;
+}
+p, span {
+     font-size: 1.1rem;
+}
+a {
+     color: #4c2c92;
 }
 
 
@@ -36,13 +57,26 @@ header {
      display: flex;
      justify-content: space-between;
      align-items: center;
+}
+header, .threeColumn, .articles {
      padding: 0 30px;
+}
+header > div {
+     display: flex;
+     align-items: center;
 }
 .menu {
      display: none;
 }
 .menuLogo {
      display: inline;
+}
+.circle {
+     margin-right: 15px;
+     width: 20px;
+     height: 20px;
+     border-radius: 50%;
+     background-color: #b42373;
 }
 
 /************* Sandwich Menu *************/
@@ -53,8 +87,8 @@ header {
    
    .bar1, .bar2, .bar3 {
      width: 35px;
-     height: 5px;
-     background-color: #CA2675;
+     height: 4px;
+     background-color: #333333;
      margin: 6px 0;
      transition: 0.4s;
    }
@@ -76,17 +110,40 @@ header {
      display: flex;
      flex-flow: column;
      align-items: center;
-     background-color: #CA2675;
+     background-color: #4c2c92;
      color: #f9f9f9;
-     padding: 3% 10%;
+     padding: 3% 35px 5% 35px;
 }
+.heroHeader2 {
+     margin-top: 0px;
+     margin-bottom: 10px;
+     border-top: 1px solid white;
+     border-bottom: 1px solid white;
+     padding: 25px 0;
+     line-height: 1.7rem;
+}
+.articles {
+    padding: 0 35px 20px 35px; 
+}
+.threeColumn {
+     padding: 0 35px; 
+ }
 .donateInvolve {
-     background-color: #CA2675;
+     background-color: #4c2c92;
      color: #f9f9f9;
+     padding: 5px 35px 30px 35px;
+}
+.donateInvolve a {
+     color: white;
+}
+.donInv {
+     padding: 10px 0 0 0;
 }
 
 footer {
      text-align: center;
+     font-weight: 600;
+     padding: 15px 0;
 }
 
 /******************************************
@@ -97,6 +154,7 @@ footer {
      .menu {
           display: inline;
           list-style-type: none;
+          margin: 0;
      }
      .menu li {
           display: inline;
@@ -113,5 +171,11 @@ footer {
      }
      .column {
           width: 33%;
+     }
+     .donateInvolve {
+          display: flex;
+     }
+     .donInv {
+          width: 50%;
      }
 }
