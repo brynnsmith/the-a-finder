@@ -37,13 +37,15 @@ ul {
      margin-top: -8px;
 }
 li {
-     font-size: 1.2rem;
      line-height: 1.4;
 }
-p, span {
+span {
      font-size: 1.1rem;
 }
-a {
+p, li {
+     font-size: 1.2rem;
+}
+a, a:visited {
      color: #4c2c92;
 }
 
@@ -52,8 +54,7 @@ a {
 /* LAYOUT
 /*******************************************/
 header {
-     height: 50px;
-     border-bottom: 1px solid lightgrey;
+     height: 60px;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -126,7 +127,16 @@ header > div {
     padding: 0 35px 20px 35px; 
 }
 .threeColumn {
-     padding: 0 35px; 
+     padding: 35px; 
+ }
+ .midH2 {
+     margin-bottom: -10px;
+ }
+ .midDesc {
+     margin-bottom: 25px;
+ }
+ .icon {
+     width: 30%;
  }
 .donateInvolve {
      background-color: #4c2c92;
@@ -159,18 +169,29 @@ footer {
      .menu li {
           display: inline;
           margin: 0 15px;
+          font-size: 1.1rem;
+     }
+     .menu a {
+          color: #4c2c92;
+          font-weight: 600;
+          text-decoration: none;
      }
      .sandwichContainer {
           display: none;
         }
      .hero {
           text-align: center;
+          padding: 3% 300px 5% 300px;
      }
      .threeColumn {
           display: flex;
      }
      .column {
           width: 33%;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          
      }
      .donateInvolve {
           display: flex;
