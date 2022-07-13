@@ -38,6 +38,8 @@ ul {
 }
 li {
      line-height: 1.4;
+     color: #b42373;
+     font-weight: 600;
 }
 span {
      font-size: 1.1rem;
@@ -123,11 +125,19 @@ header > div {
      padding: 25px 0;
      line-height: 1.7rem;
 }
-.articles {
-    padding: 0 35px 20px 35px; 
-}
 .threeColumn {
      padding: 35px; 
+ }
+ .column {
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     margin-bottom: 20px;
+     padding: 20px 0;
+     border-bottom: 1px solid lightgrey;
+ }
+ .column:last-of-type {
+     border-bottom: none;
  }
  .midH2 {
      margin-bottom: -10px;
@@ -137,6 +147,16 @@ header > div {
  }
  .icon {
      width: 30%;
+ }
+ .articles {
+     padding: 0 35px 20px 35px; 
+ }
+ .article {
+     display: flex;
+     flex-flow: column;
+ }
+ .articleImg {
+     width: 100%;
  }
 .donateInvolve {
      background-color: #4c2c92;
@@ -172,7 +192,7 @@ footer {
           font-size: 1.1rem;
      }
      .menu a {
-          color: #4c2c92;
+          color: #41257c;
           font-weight: 600;
           text-decoration: none;
      }
@@ -188,10 +208,20 @@ footer {
      }
      .column {
           width: 33%;
+          margin-bottom: 0;
+          padding: 20px 0;
+          border-bottom: none;
+     }
+     .articles {
           display: flex;
-          flex-flow: column;
+     }
+     .article {
           align-items: center;
-          
+          width: 33%;
+          padding: 40px 30px 50px 40px;
+     }
+     .articleImg {
+          width: 380px;
      }
      .donateInvolve {
           display: flex;
