@@ -60,6 +60,7 @@ header {
      display: flex;
      justify-content: space-between;
      align-items: center;
+     position: relative;
 }
 header, .threeColumn, .articles {
      padding: 0 30px;
@@ -68,8 +69,33 @@ header > div {
      display: flex;
      align-items: center;
 }
-.menu {
+.mobileMenuContainer {
+     position: fixed;
      display: none;
+     height: 110%;
+     width: 100vw;
+     left:0;
+     background: rgba(255, 255, 255, 0.95);
+     text-align: center;
+}
+.menu {
+     margin: 0;
+     top: 50%;
+     display: block;
+     position: relative;
+     list-style: none;
+     text-decoration: none;
+     z-index: 2;
+     padding: 30px 0 5px 0;
+}
+.menu a {
+     text-decoration: none;
+     line-height: 3;
+     display: block;
+}
+.menu a:hover, .menu a:active {
+     background: #f1e8fd;
+
 }
 .menuLogo {
      display: inline;
@@ -98,7 +124,7 @@ header > div {
    
    .change .bar1 {
      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-     transform: rotate(-45deg) translate(-9px, 6px);
+     transform: rotate(-45deg) translate(-7px, 6px);
    }
    
    .change .bar2 {opacity: 0;}
@@ -107,6 +133,7 @@ header > div {
      -webkit-transform: rotate(45deg) translate(-8px, -8px);
      transform: rotate(45deg) translate(-8px, -8px);
    }
+
 
 /************* Main Content *************/
 .hero {
@@ -182,9 +209,12 @@ footer {
 
 @media (min-width:1200px) {
      .menu {
+          position: unset;
           display: inline;
           list-style-type: none;
           margin: 0;
+          padding: 0;
+          background: none;
      }
      .menu li {
           display: inline;
@@ -194,7 +224,18 @@ footer {
      .menu a {
           color: #41257c;
           font-weight: 600;
-          text-decoration: none;
+          display: inline-block;
+     }
+     .menu a:hover {
+          color: #b42373;
+          background: none;
+     }
+     .mobileMenuContainer {
+          display: inline-block;
+          position: unset;
+          height: auto;
+          width: auto;
+          left: auto;
      }
      .sandwichContainer {
           display: none;
