@@ -1,6 +1,6 @@
 <h1>The A Finder</h1>
 
-A web application with information on the closest care locations, accessing care remotely and how to protect digital privacy while searching and communicating health needs online.
+A web application with information on safe abortion access, support and care in the United States post Roe v. Wade. It includes links to assist with locating clinics for safe abortion, finding funds for abortion care, legal resources, protecting your privacy online, accessing the abortion pill, accessing mental health support, organizations to donate to and ways to get involved as an individual. 
 
 Link to project: 
 
