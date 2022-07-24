@@ -11,3 +11,5 @@ Link to project:
 <h2>Optimizations</h2>
 
 <h2>Lessons Learned</h2>
+
+- 
