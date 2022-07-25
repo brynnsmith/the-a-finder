@@ -2,9 +2,10 @@
 document.querySelector('.sandwichContainer').addEventListener('click', sandwichMenu)
 document.querySelector('.menu').addEventListener('click', closeSandwichMenu)
 
+let menuDisplay = document.querySelector('.mobileMenuContainer')
+
 function sandwichMenu(x) {
     x.classList.toggle("change");
-    let menuDisplay = document.querySelector('.mobileMenuContainer')
     if (menuDisplay.style.display === 'block') {
       menuDisplay.style.display = 'none'
     } else {
@@ -13,11 +14,10 @@ function sandwichMenu(x) {
   }
 
   function closeSandwichMenu() {
-    document.querySelector('.sandwichContainer').classList.toggle("change");
-    if (window.matchMedia("(min-width:1200px)")) {
-      document.querySelector('.mobileMenuContainer').style.display = 'inline-block';
-    } 
-    document.querySelector('.mobileMenuContainer').style.display = 'none';
+    if (menuDisplay.style.display === 'block') {
+      document.querySelector('.sandwichContainer').classList.toggle("change");
+        menuDisplay.style.display = 'none';
+    }
   }
 
  /* Bug to fix if there is time -- 
