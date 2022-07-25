@@ -194,7 +194,9 @@ header, .threeColumn, .articles {
      border-radius: 20px;
      box-shadow: 0px 0px 7px rgb(187, 187, 187);
  }
-
+ .article ul {
+     padding-left: 25px;
+}
  .articleImg {
      width: 100%;
  }
