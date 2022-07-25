@@ -38,7 +38,7 @@ ul {
      margin-top: -8px;
 }
 li {
-     line-height: 1.4;
+     line-height: 1.5;
      color: #b42373;
      font-weight: 600;
 }
@@ -56,19 +56,20 @@ a, a:visited {
 /******************************************
 /* LAYOUT
 /*******************************************/
+header, header > div, .hero, .column, .article {
+     display: flex;
+     align-items: center;
+}
+header, .menu {
+     position: relative;
+}
+
 header {
      height: 60px;
-     display: flex;
      justify-content: space-between;
-     align-items: center;
-     position: relative;
 }
 header, .threeColumn, .articles {
      padding: 0 30px;
-}
-header > div {
-     display: flex;
-     align-items: center;
 }
 .mobileMenuContainer {
      position: fixed;
@@ -83,22 +84,24 @@ header > div {
 .menu {
      margin: 0;
      top: 50%;
-     display: block;
-     position: relative;
      list-style: none;
      text-decoration: none;
      z-index: 2;
      padding: 5px 0 5px 0;
 }
+.menu, .menu a {
+     display: block;
+}
 .menu a {
      text-decoration: none;
      line-height: 3;
-     display: block;
 }
-.menu a:hover, .menu a:active {
+.menu a:hover, .menu a:active, .articles {
      background: #f1e8fd;
-     border-bottom: 1px solid white;
-     border-top: 1px solid white;
+}
+.menu a:hover, .menu a:active, .heroHeader2 {
+     border-bottom: 1px solid #f9f9f9;;
+     border-top: 1px solid #f9f9f9;;
 
 }
 .menuLogo {
@@ -109,7 +112,7 @@ header > div {
      width: 20px;
      height: 20px;
      border-radius: 50%;
-     background-color: #b42373;
+     background: #b42373;
 }
 
 /************* Sandwich Menu *************/
@@ -121,7 +124,7 @@ header > div {
    .bar1, .bar2, .bar3 {
      width: 35px;
      height: 4px;
-     background-color: #333333;
+     background: #333333;
      margin: 6px 0;
      transition: 0.4s;
    }
@@ -140,19 +143,21 @@ header > div {
 
 
 /************* Main Content *************/
-.hero {
-     display: flex;
-     flex-flow: column;
-     align-items: center;
-     background-color: #4c2c92;
+.hero, .donateInvolve, .donateInvolve a {
      color: #f9f9f9;
+}
+.hero, .column, .article {
+     flex-direction: column;
+}
+.hero, .donateInvolve {
+     background: #4c2c92;
+}
+ .hero {
      padding: 3% 35px 5% 35px;
 }
 .heroHeader2 {
      margin-top: 0px;
      margin-bottom: 10px;
-     border-top: 1px solid #f9f9f9;
-     border-bottom: 1px solid #f9f9f9;
      padding: 25px 0;
      line-height: 1.7rem;
 }
@@ -160,9 +165,6 @@ header > div {
      padding: 35px 35px 15px 35px; 
  }
  .column {
-     display: flex;
-     flex-flow: column;
-     align-items: center;
      margin-bottom: 20px;
      padding: 20px 0;
      border-bottom: 1px solid lightgrey;
@@ -181,37 +183,34 @@ header > div {
  }
  .articles {
      padding: 20px 35px 20px 15px; 
-     background: #f1e8fd;
  }
 
  .article {
      background: #f9f9f9;
-     display: flex;
-     flex-flow: column;
      margin: 20px 10px;
-     align-items: center;
      justify-content: center;
      width: 100%;
      padding: 40px 30px 50px 30px;
      border-radius: 20px;
      box-shadow: 0px 0px 7px rgb(187, 187, 187);
  }
- 
+ .article ul {
+     list-style-position: inside;
+     padding-left: 0;
+}
  .articleImg {
      width: 100%;
  }
 .donateInvolve {
-     background-color: #4c2c92;
-     color: #f9f9f9;
-     padding: 5px 35px 30px 35px;
-}
-.donateInvolve a {
-     color: #f9f9f9;
+     padding: 10px 35px 30px 40px;
 }
 .donInv {
      padding: 10px 0 0 0;
 }
-
+.donInv:first-of-type {
+     border-bottom: 1px solid #f9f9f9;
+     padding-bottom: 30px;
+}
 footer {
      text-align: center;
      font-weight: 600;
@@ -236,37 +235,41 @@ footer {
           background: #f9f9f9;
      }
      .menu {
-          position: unset;
-          display: inline;
           list-style-type: none;
           margin: 0;
           padding: 0;
+     }
+     .menu, .menu li {
+          display: inline;
+     }
+     .menu, .menu a:hover {
           background: none;
      }
+     .menu, .mobileMenuContainer {
+          position: unset;
+     }
      .menu li {
-          display: inline;
           margin: 0 15px;
           font-size: 1.1rem;
      }
      .menu a {
           color: #41257c;
           font-weight: 600;
+     }
+     .menu a, .mobileMenuContainer {
           display: inline-block;
      }
      .menu a:hover {
           color: #b42373;
-          background: none;
      }
      .mobileMenuContainer {
-          display: inline-block;
-          position: unset;
           height: auto;
           width: auto;
           left: auto;
      }
      .sandwichContainer {
           display: none;
-        }
+     }
      .hero {
           text-align: center;
           padding: 3% 300px 5% 300px;
@@ -277,30 +280,36 @@ footer {
           margin: 20px 10px -30px 10px;
      }
      .column {
-          width: 33%;
           margin: 20px 10px;
           padding: 40px 30px 50px 30px;
           border-radius: 20px;
           box-shadow: 0px 0px 7px rgb(187, 187, 187);
           justify-content: center;
      }
+     .column, .article {
+          width: 33%;
+     }
+     .articles, .donateInvolve {
+          display: flex;
+     }
      .articles {
           padding: 0 35px 20px 35px; 
           flex-direction: row;
-          display: flex;
           margin: 10px;
-     }
-     .article {
-          width: 33%;
      }
      .articleImg {
           width: 380px;
      }
-     .donateInvolve {
-          display: flex;
+     .article ul {
+          list-style-position: outside;
+          padding-left: 30px;
      }
      .donInv {
           width: 50%;
           padding: 30px 80px;
+     }
+     .donInv:first-of-type {
+          border-bottom: none;
+          padding-bottom: 0;
      }
 }
