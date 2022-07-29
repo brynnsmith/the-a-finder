@@ -14,7 +14,7 @@ The A Finder's design was conceptualized in Figma with a basic wireframe and col
 
 <h2>Optimizations</h2>
 
-If I had more time for this project, I would have liked to add translations in multiple languages so more people could easily access the content. I would also add smooth transitions for page jumps and smooth scrolling to enhance the user experience.
+If I had more time for this project, I would have liked to add translations in multiple languages so more people could easily access the content. I would also add smooth transitions for page jumps to enhance the user experience.
 
 <h2>Lessons Learned</h2>
 
