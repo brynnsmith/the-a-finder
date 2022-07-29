@@ -18,4 +18,4 @@ If I had more time for this project, I would have liked to add translations in m
 
 <h2>Lessons Learned</h2>
 
-The main challenge of this project was delivering a product that was both visually minimal as well as engaging. The experience was expected to feel comfortable and welcoming for the user, so colour and graphic art style were very important. The menu was to have the same aesthetic, so I carried the colour palette over and added a smooth transition upon toggling the sandwich icon.
+The main challenge of this project was delivering a product that was both minimal and engaging. The experience was expected to feel comfortable and welcoming for the user, so colour and graphic art style were very important. The menu was also to have the same aesthetic, so I carried the colour palette over and added a smooth transition upon toggling the sandwich icon.
