@@ -51,6 +51,9 @@ p, li {
 a, a:visited {
      color: #4c2c92;
 }
+a:focus {
+     outline: 2px solid lavender;
+   }
 
 
 /******************************************
@@ -96,10 +99,10 @@ header, .threeColumn, .articles {
      text-decoration: none;
      line-height: 3;
 }
-.menu a:hover, .menu a:active, .articles {
+.menu a:hover, .menu a:active, .menu a:focus, .articles {
      background: #f1e8fd;
 }
-.menu a:hover, .menu a:active, .heroHeader2 {
+.menu a:hover, .menu a:active, .heroHeader2, .menu a:focus {
      border-bottom: 1px solid #f9f9f9;;
      border-top: 1px solid #f9f9f9;;
 
@@ -259,7 +262,7 @@ footer {
      .menu a, .mobileMenuContainer {
           display: inline-block;
      }
-     .menu a:hover {
+     .menu a:hover, .menu a:focus, a:hover, a:focus {
           color: #b42373;
      }
      .mobileMenuContainer {
